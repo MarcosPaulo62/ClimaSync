@@ -1,4 +1,5 @@
 import Button from '../../components/button';
+import CardClima from '../../components/cardClima';
 import './home.css';
 
 export default function Home(){
@@ -15,7 +16,7 @@ export default function Home(){
                         </div>    
                     </div>                                    
                 </div>
-                <h1>Previsão atual default</h1>
+                <CardClima />
             </section>
         </main>
     )
