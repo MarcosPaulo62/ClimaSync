@@ -1,0 +1,11 @@
+.link-menu{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.link-menu:hover{
+    color: aqua;
+    transition: all 0.5s;
+}

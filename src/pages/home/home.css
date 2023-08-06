@@ -1,0 +1,53 @@
+.home{
+    padding: 5rem 7.5rem 4.5rem;
+}
+
+.principal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Button{
+    color: yellow;
+}
+
+.sobre{
+    border-radius: 10px;
+    background: rgba(5, 142, 217, 0.50);
+    width: 501px;
+    height: 437px;
+    padding: 4.5rem 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.sobre > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.sobre h1{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--white, #FFF);
+    font-weight: 600;
+}
+
+.sobre p{
+    color: var(--white, #FFF);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.sobre span{
+    font-weight: 700;
+}
+
+.sobre .buttons{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 0 auto;
+}
