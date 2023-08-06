@@ -1,0 +1,7 @@
+.climaAgora{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.5rem;
+    padding-bottom: 4.5rem;
+}

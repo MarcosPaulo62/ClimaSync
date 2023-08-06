@@ -1,0 +1,28 @@
+.contato-main{
+    padding: 5rem 20rem 4.5rem;
+}
+
+.contato{
+    border-radius: 10px;
+    padding: 3rem 10rem;
+    background: var(--white, #FFF);
+}
+
+.contato h2{
+    color: var(--font-color, #1C3738);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.contato form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.contato form .input{
+    width: 100%;
+}

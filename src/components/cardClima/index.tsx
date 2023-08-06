@@ -6,31 +6,36 @@ import dia from '../../assets/sun-fill.svg';
 import noite from '../../assets/moon-fill.svg';
 import vento from '../../assets/wind-fill.svg';
 import umidade from '../../assets/drop-fill.svg';
+import termometro from '../../assets/ThermometerSimple.svg';
 import Button from '../button';
 
 interface Clima{
     temp: number,
-    condition_code: string,
     description: string,
-    currently: string,
     city: string,
     humidity: number,
-    wind_speedy: string
+    wind_speedy: number
 }
 
-let response = {
-    temp: 19,
-    condition_code: "28",
-    description: "Tempo nublado",
-    currently: "noite",
-    city: "Cruz das Almas, BA",
-    humidity: 93,
-    wind_speedy: "1.63 km/h"
+let objetoDefault: Clima = {
+    temp: 0,
+    description: "",
+    city: "",
+    humidity: 0,
+    wind_speedy: 0
 }
 
-export default function CardClima(){
+interface Cidade{
+    cidade: string;
+}
 
-    const [clima, setClima] = useState<Clima> (response);
+export default function CardClima({ cidade }: Cidade){
+    const nomeCidade = (cidade.trim()).replace(" ", "+");
+
+    const apiKey = 'e2c83d17e1e783d969e8dd525e2204ae';
+    const apWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${nomeCidade}&units=metric&appid=${apiKey}&lang=pt_br`;
+
+    const [clima, setClima] = useState<Clima> (objetoDefault);
 
     useEffect(() => {
         fetchClima();
@@ -38,22 +43,21 @@ export default function CardClima(){
 
     const fetchClima = async () => {
         try{
-            const response = await fetch('https://api.hgbrasil.com/weather?key=6a46c28e&city_name=Campinas,SP');
+            const response = await fetch(apWeatherUrl);
             const data = await response.json();
 
-            console.log(data);
+            let retorno: Clima = {
+                temp: data.main.temp,
+                description: data.weather[0].description,
+                city: data.name,
+                humidity: data.main.humidity,
+                wind_speedy: data.wind.speed
+            }
+
+            setClima(retorno);
         } catch (error) {
             console.log(error);
         }
-    }
-
-
-    let diaOrNight = null;
-
-    if (clima.currently == 'dia'){
-        diaOrNight = <img src={dia} alt={"símbolo " + clima.currently} />;
-    } else {
-        diaOrNight = <img src={noite} alt={"símbolo " + clima.currently} />
     }
 
     return(
@@ -62,16 +66,13 @@ export default function CardClima(){
                 <h3>Tempo agora em <br />{clima.city}</h3>
 
                 <div className='temperatura'>
-                    <img src={sol} alt={"símbolo que representa " + clima.description} />
-                    <p>{clima.temp}°</p>
+                    <img src={termometro} alt="símbolo termômetro" />
+                    <p>{Math.round(clima.temp)}°</p>
                 </div>
 
                 <div className='condicao-atual'>
                     <p>
-                        <img src={nuvem} alt="símbolo nuvem" /> <span>{clima.description}</span>
-                    </p>
-                    <p>
-                        {diaOrNight} <span>{capitalizarTexto(clima.currently)}</span>
+                        <img src={nuvem} alt="símbolo nuvem" /> <span>{capitalizarTexto(clima.description)}</span>
                     </p>
                 </div>
 
@@ -81,7 +82,7 @@ export default function CardClima(){
                         <img src={vento} alt="símbolo do vento" /> <span>VENTO</span>
                     </p>
                     <p className='valor'>
-                        {clima.wind_speedy}
+                        {Math.round(clima.wind_speedy)} km/h
                     </p>
                 </div>
 
