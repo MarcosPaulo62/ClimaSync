@@ -14,7 +14,7 @@
 .sobre{
     border-radius: 10px;
     background: rgba(5, 142, 217, 0.50);
-    width: 501px;
+    width: 600px;
     height: 437px;
     padding: 4.5rem 3rem;
     display: flex;
@@ -50,4 +50,68 @@
     gap: 2rem;
     justify-content: center;
     margin: 0 auto;
+}
+
+.oQueSomos{
+    margin-top: 4.5rem;
+    border-radius: 10px;
+    background-color: rgba(203, 239, 67, 0.70);
+    padding: 4.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.oQueSomos h2, .oQueSomos p{
+    color: var(--white, #FFF);
+}
+
+.oQueSomos h2{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.oQueSomos p{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.newsletter{
+    margin-top: 4.5rem;
+    border-radius: 10px;
+    background: var(--white, #FFF);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.newsletter h2, .newsletter p{
+    color: var(--font-color, #1C3738);
+    text-align: center;
+    font-weight: 600;
+}
+
+.newsletter h2{
+    font-size: 2rem;
+}
+
+.newsletter p{
+    font-size: 1.25rem;
+}
+
+.newsletter form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.newsletter .email{
+    width: 350px;
+}
+
+.newsletter .cidade{
+    width: 250px;
 }

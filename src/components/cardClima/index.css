@@ -5,7 +5,7 @@ hr{
 }
 
 .card-clima{
-    width: 501px;
+    width: 600px;
     height: 435px;
     border-radius: 10px;
     background-color: var(--white, #FFF);
@@ -26,7 +26,7 @@ hr{
 
 .temperatura{
     display: flex;
-    gap: 1rem;
+    gap: 0;
     align-items: center;
     margin-bottom: 2rem;
 }
@@ -44,7 +44,7 @@ hr{
 .condicao-atual{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0 2.5rem;
     margin-bottom: 0.8rem;
 }
