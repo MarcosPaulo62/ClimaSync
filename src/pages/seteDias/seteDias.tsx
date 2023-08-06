@@ -17,7 +17,7 @@ export default function SeteDias(){
     return(
         <main className='seteDias'>
             <section>
-                <PesquisaCidade titulo='Veja o clima na sua cidade nos próximos 7 dias' />
+                <PesquisaCidade titulo='Previsão para a sua cidade nos próximos 7 dias' />
             </section>
            
             <section className='cards'>
