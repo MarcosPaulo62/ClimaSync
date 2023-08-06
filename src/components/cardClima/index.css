@@ -1,0 +1,83 @@
+hr{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--font-color, #1C3738);
+}
+
+.card-clima{
+    width: 501px;
+    height: 435px;
+    border-radius: 10px;
+    background-color: var(--white, #FFF);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.card-clima h3{
+    color: var(--font-color, #1C3738);
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.temperatura{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.temperatura img{
+    width: 58px;
+}
+
+.temperatura p{
+    color: var(--font-color, #1C3738);
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.condicao-atual{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.condicao-atual p{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.condicao-atual span{
+    color: var(--font-color, #1C3738);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.vento, .umidade{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.53em 0;
+}
+
+.vento p, .umidade p{
+    color: var(--font-color, #1C3738);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-clima button{
+    margin-top: 1rem;
+}
