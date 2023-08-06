@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <a href="vs12-front-react-climasync.vercel.app" target="_blank">➡️ Acesse o deploy!</a>
+  <a href="https://vs12-front-react-climasync.vercel.app/" target="_blank">➡️ Acesse o deploy!</a>
 </p>
 
 ## 🚀 Tecnologias
