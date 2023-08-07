@@ -13,7 +13,7 @@ export default function Contato(){
                         <TextField className='input' id="outlined-basic" label="Seu email" variant="outlined" />
                         <TextField className='input' id="outlined-basic" label="Assunto" variant="outlined" />
                         <TextField multiline={true} rows={4} className='input' id="outlined-basic" label="Mensagem" variant="outlined" />
-                        <Button href='/' color='var(--primary-color)'>ENVIAR</Button>
+                        <Button href='' color='var(--primary-color)'>ENVIAR</Button>
                     </form>
                 </div>
             </main>
